@@ -10,6 +10,10 @@ const User = ({
   followers,
   following,
 }: UserProps) => {
+  const saveUser = () => {
+    localStorage.setItem("login", login);
+  };
+
   return (
     <div className={styles.user}>
       <img src={avatar_url} alt={login} />
@@ -31,7 +35,9 @@ const User = ({
           <p className={styles.stats_numbers}>{following}</p>
         </div>
       </div>
-      <Link to={`/repos/${login}`}>See the best projects!</Link>
+      <Link to={`/repos`} onClick={() => saveUser()}>
+        See the best projects!
+      </Link>
     </div>
   );
 };
