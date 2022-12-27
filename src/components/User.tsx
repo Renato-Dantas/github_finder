@@ -12,6 +12,7 @@ const User = ({
 }: UserProps) => {
   const saveUser = () => {
     localStorage.setItem("login", login);
+    localStorage.setItem("avatar", avatar_url);
   };
 
   return (

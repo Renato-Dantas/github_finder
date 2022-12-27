@@ -3,6 +3,7 @@ export default interface CardProps {
   name: string;
   owner: {
     login: string;
+    avatar_url?: string;
   };
   updated_at: string;
 }
